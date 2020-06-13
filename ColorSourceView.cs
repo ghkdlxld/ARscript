@@ -5,7 +5,7 @@ using Windows.Kinect;
 public class ColorSourceView : MonoBehaviour
 {
     public GameObject ColorSourceManager; //ColorSourceManager라는 게임 오브젝트를 public으로 선언
-    private ColorSourceManager _ColorManager;
+    private ColorSourceManager _ColorManager; //앞에 스크립트를 _ColorManager라는 변수로 선언
     
     void Start ()
     {

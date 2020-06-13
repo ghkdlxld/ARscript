@@ -20,7 +20,7 @@ public class DepthSourceManager : MonoBehaviour
         if (_Sensor != null) //_Sensor 채워져 있으면
         {
             _Reader = _Sensor.DepthFrameSource.OpenReader(); //_Reader는 KinectSensor의 OpenReader()를 사용해 Depth Data를 Open
-            _Data = new ushort[_Sensor.DepthFrameSource.FrameDescription.LengthInPixels]; //_Data는 새로운 Depth Data의 length당 pixel 정보를 저장
+            _Data = new ushort[_Sensor.DepthFrameSource.FrameDescription.LengthInPixels]; //_Data는 새로운 Depth Data의 length pixel 단위로 정보를 저장
         }
     }
     
@@ -28,7 +28,7 @@ public class DepthSourceManager : MonoBehaviour
     {
         if (_Reader != null) //_Reader 채워져 있으면
         {
-            var frame = _Reader.AcquireLatestFrame(); //frame은 _Reader의 마지막 프레임
+            var frame = _Reader.AcquireLatestFrame(); //frame은 _Reader의 최신 프레임
             if (frame != null) //frame이 채워져 있으면
             {
                 frame.CopyFrameDataToArray(_Data); //Frame Data를 배열에 복사하여 원하는 형태로 사용

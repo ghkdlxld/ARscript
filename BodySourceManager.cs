@@ -22,9 +22,9 @@ public class BodySourceManager : MonoBehaviour //외부객체허용 (BodySourceM
         //현재 V2는 Multi Kinect 연결 구성이 지원되지 않습니다.
         //향후 SDK 패치를 통해서 Multi Kinect 지원을 하겠다고 MS에서는 이야기 하고 있습니다.
 
-        if (_Sensor != null)        //만약 _Sensor 가 비어있지 않다면
+        if (_Sensor != null)        //만약 _Sensor 가 있으면(null 의 부정)
         {
-            _Reader = _Sensor.BodyFrameSource.OpenReader(); //KinectSensor의 OpenReader()를 사용해 BodyFrameData 를 Open
+            _Reader = _Sensor.BodyFrameSource.OpenReader(); //_Sensor.BodyFrameSource의 OpenReader()를 사용=> _Reader
 
             if (!_Sensor.IsOpen)    //만약 _Sensor가 열려있지 않으면
             {
@@ -35,15 +35,16 @@ public class BodySourceManager : MonoBehaviour //외부객체허용 (BodySourceM
     
     void Update ()      //스크립트가 실행되는 동안 매 프레임마다 실행
     {
-        if (_Reader != null)    //_Reader 변수가 비어있지 않다면
+        if (_Reader != null)    //_Reader 변수가 Data를 가지면
         {
-            var frame = _Reader.AcquireLatestFrame();   // frame변수에 마지막 Frame data저장
-            if (frame != null)      //frame변수가 비어있지 않다면 if문 실행
+            var frame = _Reader.AcquireLatestFrame();   // frame변수에 최신의 Frame data저장
+            if (frame != null)      //frame변수가 Data를 가지면 if문 실행
             {
                 if (_Data == null)  //만약 _Data변수(Body배열)가 비어있다면
                 {
                     _Data = new Body[_Sensor.BodyFrameSource.BodyCount];    
                     //새 Body배열에 body count(시스템에서 tracking 할 수 있는 body 수 및 이러한 본문을 저장하는 데 사용해야하는 컬렉션의 크기)를 가져옴
+                    //Body에 센서단에 있는 바디카운트를 Data에 저장
                 }
                 
                 frame.GetAndRefreshBodyData(_Data); //새로 고친 신체 데이터를 가져옴

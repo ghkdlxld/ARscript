@@ -8,7 +8,7 @@ public enum DepthViewMode //열거형 class
     MultiSourceReader,
 }
 
-public class DepthSourceView : MonoBehaviour ////모든 유니티 스크립트가 상속 받는 클래스
+public class DepthSourceView : MonoBehaviour //모든 유니티 스크립트가 상속 받는 클래스
 {
     public DepthViewMode ViewMode = DepthViewMode.SeparateSourceReaders; 
     
@@ -26,7 +26,7 @@ public class DepthSourceView : MonoBehaviour ////모든 유니티 스크립트�
     // Only works at 4 right now
     private const int _DownsampleSize = 4; //상수선언(int : 4byte 정수)
     private const double _DepthScale = 0.1f; //double : 8byte 실수(f=float)
-    private const int _Speed = 50;
+    private const int _Speed = 50; //깊이측정 속도
     
     private MultiSourceManager _MultiManager;
     private ColorSourceManager _ColorManager;
@@ -130,9 +130,9 @@ public class DepthSourceView : MonoBehaviour ////모든 유니티 스크립트�
             (xVal * Time.deltaTime * _Speed), 
             (yVal * Time.deltaTime * _Speed), 
             0, 
-            Space.Self);
+            Space.Self); //스피드
             
-        if (ViewMode == DepthViewMode.SeparateSourceReaders)
+        if (ViewMode == DepthViewMode.SeparateSourceReaders) //separate이면, color랑 depth 반환
         {
             if (ColorSourceManager == null)
             {
@@ -161,7 +161,7 @@ public class DepthSourceView : MonoBehaviour ////모든 유니티 스크립트�
                 _ColorManager.ColorWidth,
                 _ColorManager.ColorHeight);
         }
-        else
+        else //multisourceview이면 multi 반환
         {
             if (MultiSourceManager == null)
             {
@@ -182,14 +182,14 @@ public class DepthSourceView : MonoBehaviour ////모든 유니티 스크립트�
         }
     }
     
-    private void RefreshData(ushort[] depthData, int colorWidth, int colorHeight)
+    private void RefreshData(ushort[] depthData, int colorWidth, int colorHeight) //깊이, 넓이, 높이
     {
         var frameDesc = _Sensor.DepthFrameSource.FrameDescription;
         
         ColorSpacePoint[] colorSpace = new ColorSpacePoint[depthData.Length];
         _Mapper.MapDepthFrameToColorSpace(depthData, colorSpace);
         
-        for (int y = 0; y < frameDesc.Height; y += _DownsampleSize)
+        for (int y = 0; y < frameDesc.Height; y += _DownsampleSize) 
         {
             for (int x = 0; x < frameDesc.Width; x += _DownsampleSize)
             {

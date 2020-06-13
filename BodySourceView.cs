@@ -60,7 +60,7 @@ public class BodySourceView : MonoBehaviour //외부객체허용, (BodySourceVie
         }
         
         _BodyManager = BodySourceManager.GetComponent<BodySourceManager>();
-    //이 스크립트가 포함된 게임오브젝트가 갖고 있는 컴포넌트 중에서 BodySourceManager컴포넌트를 추출하여 _BodyManager 변수에 저장해라
+    //BodySourceManager script에서  BodySourceManager컴포넌트를 추출하여 _BodyManager 변수에 저장해라
 
         if (_BodyManager == null)   //만약 _BodyManager변수가 비어있다면
         {
@@ -84,7 +84,7 @@ public class BodySourceView : MonoBehaviour //외부객체허용, (BodySourceVie
                 
             if(body.IsTracked)          //만약 body배열이 tracked되고 있다면
             {
-                trackedIds.Add (body.TrackingId);   //trackedIds list의 끝에 body추적ID를 추가
+                trackedIds.Add (body.TrackingId);   //trackedIds list의 끝에 body추적ID를 trackedIds에 추가
             }
         }
         
@@ -104,16 +104,16 @@ public class BodySourceView : MonoBehaviour //외부객체허용, (BodySourceVie
 
         foreach(var body in data)        //data의 body들을 가지고 아래를 반복           
         {
-            if (body == null)            //만약 body배열이 비어있다면
+            if (body == null)            //만약 body데이터가 비어있다면
             {
                 continue;                //계속
             }
             
             if(body.IsTracked)           //만약 body배열이 tracked되고 있다면
             {
-                if(!_Bodies.ContainsKey(body.TrackingId))       //만약 GameObject인 _Bodies가  body.TrackingId key를 포함하지 않는다면
+                if(!_Bodies.ContainsKey(body.TrackingId))       //만약 GameObject-Dictionary 인 _Bodies에 포함된 key중 body.TrackingId가 아니면
                 {
-                    _Bodies[body.TrackingId] = CreateBodyObject(body.TrackingId);   //_Bodies[body.TrackingId]경로에 만들어라
+                    _Bodies[body.TrackingId] = CreateBodyObject(body.TrackingId);   //BodyObject에 body.TrackingId를 저장해서 _Bodies에 저장
                 }
                 
                 RefreshBodyObject(body, _Bodies[body.TrackingId]);          //데이터 업데이트
@@ -138,8 +138,8 @@ public class BodySourceView : MonoBehaviour //외부객체허용, (BodySourceVie
 
 
             jointObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);  //jointObj의 스케일을 (x,y,z) 0.3씩 늘린다
-            jointObj.name = jt.ToString();  //object 이름반환
-            jointObj.transform.parent = body.transform; //jointObj의 부모=body
+            jointObj.name = jt.ToString();  //object index 이름반환
+            jointObj.transform.parent = body.transform; //jointObj의 부모= body 로 위치저장
         }
         
         return body;    //body 반환
