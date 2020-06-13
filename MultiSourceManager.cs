@@ -60,39 +60,39 @@ public class MultiSourceManager : MonoBehaviour
             }
         }
     }
-    
-    void Update () 
+
+    void Update() //스크립트가 실행되는 동안 매 프레임마다 실행
     {
-        if (_Reader != null) 
+        if (_Reader != null) //_Reader가 채워져있으면
         {
-            var frame = _Reader.AcquireLatestFrame();
-            if (frame != null)
+            var frame = _Reader.AcquireLatestFrame(); //변수 frame = _Reader의 마지막 프레임
+            if (frame != null) //frame 채워져있으면
             {
-                var colorFrame = frame.ColorFrameReference.AcquireFrame();
-                if (colorFrame != null)
+                var colorFrame = frame.ColorFrameReference.AcquireFrame(); //_colorFrame 변수 선언
+                if (colorFrame != null) //colorFrmae 채워져있으면
                 {
-                    var depthFrame = frame.DepthFrameReference.AcquireFrame();
-                    if (depthFrame != null)
+                    var depthFrame = frame.DepthFrameReference.AcquireFrame(); //depthFrame 변수 선언
+                    if (depthFrame != null) //depthFrame이 채워져있으면
                     {
-                        colorFrame.CopyConvertedFrameDataToArray(_ColorData, ColorImageFormat.Rgba);
-                        _ColorTexture.LoadRawTextureData(_ColorData);
+                        colorFrame.CopyConvertedFrameDataToArray(_ColorData, ColorImageFormat.Rgba); //색상 및 깊이 정보를 보유하는 배열을 받기
+                        _ColorTexture.LoadRawTextureData(_ColorData); //_ColorTexture를 원래 TextureDate로 로드..?
                         _ColorTexture.Apply();
-                        
-                        depthFrame.CopyFrameDataToArray(_DepthData);
-                        
-                        depthFrame.Dispose();
-                        depthFrame = null;
+
+                        depthFrame.CopyFrameDataToArray(_DepthData); //해당하는 depthFrame Data를 배열에 복사하여 원하는 형태로 사용
+
+                        depthFrame.Dispose(); //현재 depthFrmae 종료
+                        depthFrame = null; //depthFrame 비었음
                     }
-                
-                    colorFrame.Dispose();
-                    colorFrame = null;
+
+                    colorFrame.Dispose(); //현재 colorFrmae 종료
+                    colorFrame = null; //colorFrame 비었음
                 }
-                
-                frame = null;
+
+                frame = null; //frma null
             }
         }
     }
-    
+
     void OnApplicationQuit()
     {
         if (_Reader != null)
