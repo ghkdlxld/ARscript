@@ -1,11 +1,14 @@
 ﻿using System;
-using System.Windows.Media;
 using Microsoft.Kinect;
+using System.Windows;
+
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Runtime.InteropServices;
 using System.IO;
 using System.Diagnostics;
-using System.Windows;
-using System.Runtime.InteropServices;
+
+
 
 namespace KinectCoordinateMapping
 {
