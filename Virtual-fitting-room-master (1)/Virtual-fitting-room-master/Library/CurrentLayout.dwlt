@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 791
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 741
-  m_MinSize: {x: 683, y: 498}
+  m_MinSize: {x: 613, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 129
+  controlID: 31
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1184
     height: 741
-  m_MinSize: {x: 406, y: 498}
+  m_MinSize: {x: 336, y: 498}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 130
+  controlID: 32
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,10 +162,10 @@ MonoBehaviour:
     y: 0
     width: 1184
     height: 363
-  m_MinSize: {x: 406, y: 224}
+  m_MinSize: {x: 306, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 131
+  controlID: 33
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,14 +211,14 @@ MonoBehaviour:
     y: 0
     width: 698
     height: 363
-  m_MinSize: {x: 204, y: 224}
+  m_MinSize: {x: 104, y: 124}
   m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 336, y: 274}
   m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 36
+  controlID: 125
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -289,8 +289,8 @@ MonoBehaviour:
     y: 0
     width: 707
     height: 378
-  m_MinSize: {x: 104, y: 124}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -369,7 +369,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -382,18 +382,18 @@ MonoBehaviour:
       y: 17
       width: 694
       height: 326
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 347, y: 163}
+    m_Scale: {x: 1.4257609, y: 1.4257609}
+    m_Translation: {x: 347, y: 158.6996}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -347
-      y: -163
-      width: 694
-      height: 326
+      x: -243.37881
+      y: -111.30871
+      width: 486.75763
+      height: 228.64984
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
@@ -431,24 +431,24 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 323c0000
-      m_LastClickedID: 15410
-      m_ExpandedIDs: defbffffdc38000084390000dc390000c03a0000e43b0000323c0000423c0000683c0000b63c0000163d0000
+      scrollPos: {x: 0, y: 458}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: defbffff8c390000e4390000543a0000b23a0000c63a00002a3b0000ea3b00002c3c00006a3c0000b63c0000103d0000223d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: clothing
+        m_OriginalName: clothing
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -1140
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -490,9 +490,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 370.5385, y: 177.57732, z: 894}
+    m_Target: {x: 349.9395, y: 167.6188, z: 10.769379}
     speed: 2
-    m_Value: {x: 370.5385, y: 177.57732, z: 894}
+    m_Value: {x: 349.9395, y: 167.6188, z: 10.769379}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -524,9 +524,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1296.3582
+    m_Target: 441.14273
     speed: 2
-    m_Value: 1296.3582
+    m_Value: 441.14273
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -576,34 +576,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Cloth Models/Clothing/0001
   m_ViewMode: 1
-  m_StartGridSize: 16
+  m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scripts
-  m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\user\Desktop\Virtual-fitting-room-master (1)\Virtual-fitting-room-master
+  - Assets/Cloth Models/Clothing/0001
+  m_LastFoldersGridSize: 96
+  m_LastProjectPath: C:\Users\user\Desktop\ARscript\Virtual-fitting-room-master (1)\Virtual-fitting-room-master
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 207}
-    m_SelectedIDs: 3c2b0000
-    m_LastClickedID: 11068
-    m_ExpandedIDs: 0000000042290000c02a0000da2a0000142b00003c2b0000a02b0000242c0000ae2f0000ce2f0000ce3100007a320000ae320000003500009e350000ac3f0000ae3f0000b03f0000b23f0000b43f0000b63f0000b83f0000ba3f0000bc3f000000ca9a3b
+    scrollPos: {x: 0, y: 120}
+    m_SelectedIDs: 72330000
+    m_LastClickedID: 13170
+    m_ExpandedIDs: 0000000042290000a0290000c02a0000da2a0000142b00003c2b0000a02b0000242c0000522c0000ae2f0000ce2f000084300000ce3100007a320000ae320000b032000072330000083500003035000072350000a63500001e3f0000203f0000223f0000243f0000263f0000283f00002a3f00002c3f00002e3f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Textures
-      m_OriginalName: Textures
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 12584
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -617,7 +617,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000422900007e290000a0290000c02a0000da2a0000ea2a0000142b00003c2b0000a02b0000242c00006c2c0000302e00005e2e0000ae2f0000ce2f00008430000080310000ce3100007a320000ae320000003500006a350000ac3f0000ae3f0000b03f0000b23f0000b43f0000b63f0000b83f0000ba3f0000bc3f0000
+    m_ExpandedIDs: 0000000042290000a0290000c02a0000da2a0000142b00003c2b0000a02b0000242c0000522c0000ae2f0000ce2f000084300000ce3100007a320000ae320000b032000072330000083500003035000072350000a63500001e3f0000203f0000223f0000243f0000263f0000283f00002a3f00002c3f00002e3f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -648,18 +648,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 56260000ea24000080270000f02400003a30ffff622a0000be2a00004a2d0000582700006c29000076280000822e0000162900006e260000f02800004a2600005a28ffff5c060000482d0000422b0000f42b0000842d00000000000052310000ee2700007e2f0000de2c00001a2f000006310000b0310000122300009e300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scripts
-      m_OriginalName: Scripts
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11068
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
@@ -670,8 +670,8 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 16
-  m_DirectoriesAreaWidth: 185
+    m_GridSize: 96
+  m_DirectoriesAreaWidth: 197
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
